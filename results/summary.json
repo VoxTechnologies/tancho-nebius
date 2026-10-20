@@ -1,0 +1,31 @@
+{
+ "schema_version": "tancho-tasking-model-comparison-1.0",
+ "cases_sha256": "585ccb1c22aaeda26e33fe2a74c0f6e0e89cd44c9bdd11ebd75fb5744580f3fd",
+ "case_count": 16,
+ "models": {
+  "nvidia/Nemotron-3_5-Lightning": {
+   "schema_valid": 1.0,
+   "profile_exact": 1.0,
+   "category_exact": 1.0,
+   "question_f1_mean": 0.979,
+   "all_three_exact": 0.9375,
+   "median_seconds": 6.53
+  },
+  "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B": {
+   "schema_valid": 1.0,
+   "profile_exact": 1.0,
+   "category_exact": 1.0,
+   "question_f1_mean": 0.958,
+   "all_three_exact": 0.875,
+   "median_seconds": 2.41
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+   "schema_valid": 1.0,
+   "profile_exact": 1.0,
+   "category_exact": 0.9375,
+   "question_f1_mean": 1.0,
+   "all_three_exact": 0.9375,
+   "median_seconds": 4.28
+  }
+ }
+}

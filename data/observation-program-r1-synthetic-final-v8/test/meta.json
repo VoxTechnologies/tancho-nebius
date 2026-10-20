@@ -1,0 +1,730 @@
+[
+  {
+    "id": "syn-test-s801-slope-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s801-slope-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s801-slope-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s801-slope-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s801-slope-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s801-access-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s801-access-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s801-access-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s801-access-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s801-access-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s801-access-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s801-access-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s801-access-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s801-access-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s801-access-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-clear-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-clear-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-clear-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-answered-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-answered-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-answered-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-far-wide-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-far-wide-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-far-wide-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-near35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-near35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-near35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-cropped35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-cropped35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-cropped35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-answered35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-answered35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-answered35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-near35",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-near35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-near35.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-answered35",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-answered35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-answered35.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-far-wide-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-far-wide-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-far-wide-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-near35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-near35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-near35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-cropped35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-cropped35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-cropped35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-reasoner-answered35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s801-slope-reasoner-answered35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-reasoner-answered35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s801-slope-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s801-slope-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s801-slope-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s801-slope-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-slope-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s801-access-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s801-access-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s801-access-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s801-access-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s801-access-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s802-slope-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s802-slope-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s802-slope-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s802-slope-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s802-access-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s802-access-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s802-access-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s802-access-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s802-access-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s802-access-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s802-access-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s802-access-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s802-access-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s802-access-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-clear-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-clear-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-clear-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-answered-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-answered-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-answered-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-far-wide-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-far-wide-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-far-wide-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-near35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-near35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-near35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-cropped35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-cropped35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-cropped35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-answered35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-answered35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-answered35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-near35",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-near35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-near35.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-answered35",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-answered35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-answered35.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-far-wide-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-far-wide-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-far-wide-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-near35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-near35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-near35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-cropped35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-cropped35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-cropped35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-reasoner-answered35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s802-slope-reasoner-answered35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-reasoner-answered35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s802-slope-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s802-slope-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s802-slope-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s802-slope-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-slope-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s802-access-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s802-access-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s802-access-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s802-access-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s802-access-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s803-slope-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s803-slope-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s803-slope-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s803-slope-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s803-access-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s803-access-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s803-access-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s803-access-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s803-access-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s803-access-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s803-access-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s803-access-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s803-access-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s803-access-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-clear-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-clear-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-clear-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-answered-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-answered-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-answered-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-far-wide-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-far-wide-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-far-wide-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-near35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-near35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-near35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-cropped35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-cropped35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-cropped35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-answered35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-answered35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-answered35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-near35",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-near35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-near35.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-answered35",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-answered35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-answered35.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-far-wide-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-far-wide-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-far-wide-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-near35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-near35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-near35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-cropped35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-cropped35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-cropped35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-reasoner-answered35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s803-slope-reasoner-answered35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-reasoner-answered35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s803-slope-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s803-slope-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s803-slope-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s803-slope-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-slope-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s803-access-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s803-access-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s803-access-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s803-access-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s803-access-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s804-slope-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s804-slope-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s804-slope-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s804-slope-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s804-access-reasoner-clear",
+    "frames": [
+      "test/frames/syn-test-s804-access-reasoner-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-reasoner-clear.json"
+  },
+  {
+    "id": "syn-test-s804-access-reasoner-unusable",
+    "frames": [
+      "test/frames/syn-test-s804-access-reasoner-unusable/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-reasoner-unusable.json"
+  },
+  {
+    "id": "syn-test-s804-access-generator-clear",
+    "frames": [
+      "test/frames/syn-test-s804-access-generator-clear/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-generator-clear.json"
+  },
+  {
+    "id": "syn-test-s804-access-generator-occluded",
+    "frames": [
+      "test/frames/syn-test-s804-access-generator-occluded/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-generator-occluded.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s804-access-reasoner-answered",
+    "frames": [
+      "test/frames/syn-test-s804-access-reasoner-answered/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-reasoner-answered.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-clear-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-clear-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-clear-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-answered-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-answered-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-answered-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-far-wide-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-far-wide-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-far-wide-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-near35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-near35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-near35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-cropped35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-cropped35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-cropped35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-answered35-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-answered35-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-answered35-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-near35",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-near35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-near35.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-answered35",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-answered35/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-answered35.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-far-wide-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-far-wide-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-far-wide-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-near35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-near35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-near35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-cropped35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-cropped35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-cropped35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-reasoner-answered35-dx-q2-c1",
+    "frames": [
+      "test/frames/syn-test-s804-slope-reasoner-answered35-dx-q2-c1/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-reasoner-answered35-dx-q2-c1.json"
+  },
+  {
+    "id": "syn-test-s804-slope-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s804-slope-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s804-slope-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s804-slope-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-slope-generator-occluded-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s804-access-generator-far-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s804-access-generator-far-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-generator-far-wide-dx.json"
+  },
+  {
+    "id": "syn-test-s804-access-generator-occluded-wide-dx",
+    "frames": [
+      "test/frames/syn-test-s804-access-generator-occluded-wide-dx/frame-1.png"
+    ],
+    "conversation": "test/text/syn-test-s804-access-generator-occluded-wide-dx.json"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "conversations": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "video",
+          "video": "video_0"
+        },
+        {
+          "type": "text",
+          "text": "ROLE: TANCHO_GENERATOR\nInspect the supplied images and compose the minimum sufficient ordered observation requirements for every verified intent. Return exactly one JSON object with fields: schema_version, outcome, observations, reason_code. Each observation has exactly: sequence, intent_sequence, view_relation, coverage, detail_level, sensor, stop_condition. Do not add, remove, rename, or answer intents. Do not emit context IDs, mission IDs, revisions, opaque hashes, targets, coordinates, angles, distances, speed, dwell time, geodetic positions, routes, or flight commands. Do not explain or repair output.\nAllowed profile vocabulary:\n{\"coverages\":[\"approach_corridor\",\"both_sides\",\"boundary\",\"connection\",\"full_target\",\"target_and_context\"],\"detail_levels\":[\"damage\",\"identify\",\"state\"],\"name\":\"access_clearance_v1\",\"question_stop_conditions\":{\"approach_access\":[\"approach_corridor_visible\"],\"bridge_damage\":[\"bridge_damage_context_visible\"],\"corridor_continuity\":[\"corridor_continuity_visible\"],\"obstruction_extent\":[\"obstruction_type_and_extent_visible\"],\"obstruction_material\":[\"obstruction_type_and_extent_visible\"],\"roadbed_loss\":[\"roadbed_edges_visible\"]},\"sensors\":[\"rgb\"],\"view_relations\":[\"along_axis\",\"context\",\"cross_section\",\"nadir\",\"oblique\",\"overview\"]}\nTrusted verified input:\n{\"context_id\":\"ctx-034597dcc2747ef2881f\",\"evidence_ids\":[\"frame-1\"],\"intents\":[{\"evidence_ids\":[\"frame-1\"],\"priority\":1,\"question\":\"corridor_continuity\",\"sequence\":0,\"target_id\":\"target-1\"}],\"max_observations\":8,\"mission_id\":\"mission-test-access\",\"mission_profile\":\"access_clearance_v1\",\"sensor_capabilities\":[\"rgb\"]}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"observations\":[{\"coverage\":\"both_sides\",\"detail_level\":\"damage\",\"intent_sequence\":0,\"sensor\":\"rgb\",\"sequence\":0,\"stop_condition\":\"corridor_continuity_visible\",\"view_relation\":\"along_axis\"}],\"outcome\":\"observe\",\"reason_code\":\"program_created\",\"schema_version\":\"tancho-observation-program-1.1\"}"
+        }
+      ]
+    }
+  ]
+}

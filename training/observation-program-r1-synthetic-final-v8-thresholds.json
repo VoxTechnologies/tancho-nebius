@@ -1,0 +1,8 @@
+{
+  "schema_version": "tancho-observation-program-eval-thresholds-1.0",
+  "pack_manifest_sha256": "5d168d6b0e86c04a791ddf7045d4a4d7799c45491c28d0615e7b0156ec83d009",
+  "minimum_schema_valid_rate": 1.0,
+  "minimum_exact_accuracy": 1.0,
+  "minimum_paired_visual_sensitivity": 1.0,
+  "notes": "Fixed in deploy/observation-program-r1-modal-training-plan-v8-2026-09-22.json before training; pack generated after the Modal v8 training completed and before any inference."
+}

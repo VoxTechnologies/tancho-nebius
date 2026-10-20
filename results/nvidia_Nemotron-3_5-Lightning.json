@@ -1,0 +1,305 @@
+{
+ "model": "nvidia/Nemotron-3_5-Lightning",
+ "cases_sha256": "585ccb1c22aaeda26e33fe2a74c0f6e0e89cd44c9bdd11ebd75fb5744580f3fd",
+ "rows": [
+  {
+   "id": "c01",
+   "seconds": 7.15,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "slope_failure_v1",
+    "category": "landslide_area",
+    "required_questions": [
+     "landslide_road_connection"
+    ],
+    "map_relations": [
+     "intersects_road"
+    ]
+   }
+  },
+  {
+   "id": "c02",
+   "seconds": 4.07,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "slope_failure_v1",
+    "category": "landslide_area",
+    "required_questions": [
+     "landslide_extent"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c03",
+   "seconds": 4.46,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "slope_failure_v1",
+    "category": "landslide_area",
+    "required_questions": [
+     "landslide_occluded_region"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c04",
+   "seconds": 6.5,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "slope_failure_v1",
+    "category": "landslide_area",
+    "required_questions": [
+     "landslide_river_connection"
+    ],
+    "map_relations": [
+     "intersects_river"
+    ]
+   }
+  },
+  {
+   "id": "c05",
+   "seconds": 4.97,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "access_clearance_v1",
+    "category": "road_segment",
+    "required_questions": [
+     "roadbed_loss"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c06",
+   "seconds": 7.38,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "access_clearance_v1",
+    "category": "obstruction_area",
+    "required_questions": [
+     "obstruction_material",
+     "obstruction_extent"
+    ],
+    "map_relations": [
+     "intersects_obstruction",
+     "on_road"
+    ]
+   }
+  },
+  {
+   "id": "c07",
+   "seconds": 5.5,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "access_clearance_v1",
+    "category": "bridge",
+    "required_questions": [
+     "bridge_damage"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c08",
+   "seconds": 7.3,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "access_clearance_v1",
+    "category": "road_segment",
+    "required_questions": [
+     "corridor_continuity"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c09",
+   "seconds": 6.74,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "flood_river_v1",
+    "category": "flood_area",
+    "required_questions": [
+     "flood_extent"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c10",
+   "seconds": 5.11,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "flood_river_v1",
+    "category": "building",
+    "required_questions": [
+     "building_waterline"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c11",
+   "seconds": 6.56,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "flood_river_v1",
+    "category": "debris_area",
+    "required_questions": [
+     "channel_blockage"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c12",
+   "seconds": 5.12,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "flood_river_v1",
+    "category": "embankment",
+    "required_questions": [
+     "embankment_damage"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c13",
+   "seconds": 3.95,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "structure_damage_v1",
+    "category": "masonry_wall",
+    "required_questions": [
+     "masonry_damage"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c14",
+   "seconds": 8.1,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "rescue_v1",
+    "category": "person",
+    "required_questions": [
+     "person_state"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c15",
+   "seconds": 7.34,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 1.0,
+   "goal": {
+    "mission_profile": "rescue_v1",
+    "category": "vehicle",
+    "required_questions": [
+     "vehicle_state",
+     "vehicle_occupant_evidence"
+    ],
+    "map_relations": []
+   }
+  },
+  {
+   "id": "c16",
+   "seconds": 6.99,
+   "ok": true,
+   "schema_valid": true,
+   "problems": [],
+   "profile_exact": true,
+   "category_exact": true,
+   "question_f1": 0.667,
+   "goal": {
+    "mission_profile": "building_earthquake_v1",
+    "category": "building",
+    "required_questions": [
+     "road_encroachment"
+    ],
+    "map_relations": [
+     "intersects_road"
+    ]
+   }
+  }
+ ]
+}

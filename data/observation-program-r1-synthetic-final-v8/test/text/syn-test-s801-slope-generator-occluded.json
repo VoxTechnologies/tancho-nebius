@@ -1,0 +1,26 @@
+{
+  "conversations": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "video",
+          "video": "video_0"
+        },
+        {
+          "type": "text",
+          "text": "ROLE: TANCHO_GENERATOR\nInspect the supplied images and compose the minimum sufficient ordered observation requirements for every verified intent. Return exactly one JSON object with fields: schema_version, outcome, observations, reason_code. Each observation has exactly: sequence, intent_sequence, view_relation, coverage, detail_level, sensor, stop_condition. Do not add, remove, rename, or answer intents. Do not emit context IDs, mission IDs, revisions, opaque hashes, targets, coordinates, angles, distances, speed, dwell time, geodetic positions, routes, or flight commands. Do not explain or repair output.\nAllowed profile vocabulary:\n{\"coverages\":[\"boundary\",\"connection\",\"full_target\",\"target_and_context\",\"upper_lower_edges\"],\"detail_levels\":[\"damage\",\"identify\",\"state\"],\"name\":\"slope_failure_v1\",\"question_stop_conditions\":{\"landslide_extent\":[\"full_boundary_visible\",\"upper_lower_edges_visible\"],\"landslide_occluded_region\":[\"occluded_region_resolved\"],\"landslide_river_connection\":[\"connection_visible\"],\"landslide_road_connection\":[\"connection_visible\"],\"slope_precursor_detail\":[\"precursor_detail_visible\"]},\"sensors\":[\"rgb\"],\"view_relations\":[\"context\",\"cross_section\",\"nadir\",\"oblique\",\"overview\"]}\nTrusted verified input:\n{\"context_id\":\"ctx-71a3afa0cbf0d55ca080\",\"evidence_ids\":[\"frame-1\"],\"intents\":[{\"evidence_ids\":[\"frame-1\"],\"priority\":1,\"question\":\"landslide_extent\",\"sequence\":0,\"target_id\":\"target-1\"}],\"max_observations\":8,\"mission_id\":\"mission-test-slope\",\"mission_profile\":\"slope_failure_v1\",\"sensor_capabilities\":[\"rgb\"]}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"observations\":[{\"coverage\":\"boundary\",\"detail_level\":\"damage\",\"intent_sequence\":0,\"sensor\":\"rgb\",\"sequence\":0,\"stop_condition\":\"full_boundary_visible\",\"view_relation\":\"oblique\"}],\"outcome\":\"observe\",\"reason_code\":\"program_created\",\"schema_version\":\"tancho-observation-program-1.1\"}"
+        }
+      ]
+    }
+  ]
+}

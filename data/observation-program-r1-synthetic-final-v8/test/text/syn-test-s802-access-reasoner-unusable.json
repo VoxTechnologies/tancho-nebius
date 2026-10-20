@@ -1,0 +1,26 @@
+{
+  "conversations": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "video",
+          "video": "video_0"
+        },
+        {
+          "type": "text",
+          "text": "ROLE: TANCHO_REASONER\nInspect the supplied images and trusted context. Select only unanswered operational questions. Return exactly one JSON object with fields: schema_version, context_id, mission_id, outcome, evidence_ids, intents, reason_code. Each intent has exactly: sequence, target_id, question, priority, evidence_ids. Do not emit observation relations, coordinates, angles, distances, speed, dwell time, geodetic positions, routes, or flight commands. Do not explain or repair uncertain input.\nAllowed profile vocabulary:\n{\"category_questions\":{\"bridge\":[\"approach_access\",\"bridge_damage\"],\"obstruction_area\":[\"obstruction_extent\",\"obstruction_material\"],\"rail_segment\":[\"approach_access\",\"corridor_continuity\"],\"road_segment\":[\"approach_access\",\"corridor_continuity\",\"roadbed_loss\"]},\"name\":\"access_clearance_v1\",\"sensors\":[\"rgb\"]}\nTrusted context:\n{\"context_id\":\"ctx-2b0933a3a29334028dc3\",\"evidence_ids\":[\"frame-1\"],\"mission_id\":\"mission-test-access\",\"mission_profile\":\"access_clearance_v1\",\"policy\":{\"max_intents\":4,\"max_observations\":8,\"max_reobservation_cycles\":1,\"max_viewpoints\":8},\"schema_version\":\"tancho-mission-context-1.1\",\"sensor_capabilities\":[\"rgb\"],\"targets\":[{\"category\":\"road_segment\",\"completed_questions\":[],\"geometry_ref\":\"procedural-target-1\",\"map_relations\":[\"road_missing\"],\"required_questions\":[\"corridor_continuity\"],\"source\":\"map_difference\",\"target_id\":\"target-1\"}]}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"context_id\":\"ctx-2b0933a3a29334028dc3\",\"evidence_ids\":[\"frame-1\"],\"intents\":[],\"mission_id\":\"mission-test-access\",\"outcome\":\"insufficient_evidence\",\"reason_code\":\"evidence_unusable\",\"schema_version\":\"tancho-observation-intent-1.0\"}"
+        }
+      ]
+    }
+  ]
+}

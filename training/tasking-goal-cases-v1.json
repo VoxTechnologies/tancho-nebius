@@ -1,0 +1,23 @@
+{
+ "schema_version": "tancho-tasking-goal-cases-1.0",
+ "frozen_on": "2026-10-21",
+ "note": "Pre-registered before any model was called. Scored on exact profile, exact category and F1 over required_questions. map_relations is recorded but not scored, because more than one relation can be defensible.",
+ "cases": [
+  {"id": "c01", "tasking": "Check whether the road under the slope is still passable after the landslide.", "mission_profile": "slope_failure_v1", "category": "landslide_area", "required_questions": ["landslide_road_connection"]},
+  {"id": "c02", "tasking": "Map how far the slope failure extends.", "mission_profile": "slope_failure_v1", "category": "landslide_area", "required_questions": ["landslide_extent"]},
+  {"id": "c03", "tasking": "Part of the landslide is hidden behind trees. Find what we cannot see from here.", "mission_profile": "slope_failure_v1", "category": "landslide_area", "required_questions": ["landslide_occluded_region"]},
+  {"id": "c04", "tasking": "Is the material from the slope reaching the river?", "mission_profile": "slope_failure_v1", "category": "landslide_area", "required_questions": ["landslide_river_connection"]},
+  {"id": "c05", "tasking": "Tell me how much of the roadbed is gone along this route.", "mission_profile": "access_clearance_v1", "category": "road_segment", "required_questions": ["roadbed_loss"]},
+  {"id": "c06", "tasking": "What is blocking the road, and how large is the blockage?", "mission_profile": "access_clearance_v1", "category": "obstruction_area", "required_questions": ["obstruction_extent", "obstruction_material"]},
+  {"id": "c07", "tasking": "Check the bridge for damage before we send vehicles across.", "mission_profile": "access_clearance_v1", "category": "bridge", "required_questions": ["bridge_damage"]},
+  {"id": "c08", "tasking": "Can trucks still get through this corridor from end to end?", "mission_profile": "access_clearance_v1", "category": "road_segment", "required_questions": ["corridor_continuity"]},
+  {"id": "c09", "tasking": "How far has the flooding spread?", "mission_profile": "flood_river_v1", "category": "flood_area", "required_questions": ["flood_extent"]},
+  {"id": "c10", "tasking": "How high is the water standing on the houses?", "mission_profile": "flood_river_v1", "category": "building", "required_questions": ["building_waterline"]},
+  {"id": "c11", "tasking": "Is debris blocking the river channel?", "mission_profile": "flood_river_v1", "category": "debris_area", "required_questions": ["channel_blockage"]},
+  {"id": "c12", "tasking": "Check the embankment for damage.", "mission_profile": "flood_river_v1", "category": "embankment", "required_questions": ["embankment_damage"]},
+  {"id": "c13", "tasking": "Is the masonry wall damaged?", "mission_profile": "structure_damage_v1", "category": "masonry_wall", "required_questions": ["masonry_damage"]},
+  {"id": "c14", "tasking": "Find people and tell me whether they are standing or lying down.", "mission_profile": "rescue_v1", "category": "person", "required_questions": ["person_state"]},
+  {"id": "c15", "tasking": "Is that vehicle overturned, and is there any sign of someone inside?", "mission_profile": "rescue_v1", "category": "vehicle", "required_questions": ["vehicle_state", "vehicle_occupant_evidence"]},
+  {"id": "c16", "tasking": "How far has the collapsed building spilled into the road?", "mission_profile": "building_earthquake_v1", "category": "building", "required_questions": ["building_collapse_extent", "road_encroachment"]}
+ ]
+}

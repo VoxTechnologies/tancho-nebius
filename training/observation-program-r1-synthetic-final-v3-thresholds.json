@@ -1,0 +1,8 @@
+{
+  "schema_version": "tancho-observation-program-eval-thresholds-1.0",
+  "pack_manifest_sha256": "db5ad7a152f0c25a9cea1e401b4a6fe195d610f7db23f3301e3cfd98c6654d80",
+  "minimum_schema_valid_rate": 1.0,
+  "minimum_exact_accuracy": 1.0,
+  "minimum_paired_visual_sensitivity": 1.0,
+  "notes": "Frozen after v4 model lock and before any inference. All scene labels are deterministic; partial credit is not a Release 1 pass."
+}
