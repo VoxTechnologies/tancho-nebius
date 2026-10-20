@@ -8,6 +8,8 @@ the frozen evaluation run on **Nebius AI Cloud**, and the ground-side tasking st
 Open weights: [`v13s/tancho`](https://huggingface.co/v13s/tancho), revision
 `1d2b42a3e00542a63bbaf216295c7d119c706b2b` (2.44B parameters, BF16).
 
+Demo video (3 minutes): https://youtu.be/3Kl3QwWzflA
+
 ## The loop
 
 ![One observation cycle](docs/figures/01-loop.png)
