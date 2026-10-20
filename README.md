@@ -10,6 +10,8 @@ Open weights: [`v13s/tancho`](https://huggingface.co/v13s/tancho), revision
 
 ## The loop
 
+![One observation cycle](docs/figures/01-loop.png)
+
 1. The aircraft captures a frame.
 2. **Reasoner** (Cosmos 3 Edge fine-tune) reads it against the observation goal and reports
    whether the goal is met, or what is missing.
