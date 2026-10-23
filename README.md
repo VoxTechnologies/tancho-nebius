@@ -60,6 +60,13 @@ Put a Token Factory API key in `~/.config/tancho/token_factory_api_key` (mode 60
 `NEBIUS_TOKEN_FACTORY_API_KEY`. Never pass a key as a command-line argument.
 
 ```bash
+python3 tools/demo_tasking.py
+```
+
+That is the step shown in the demo video: two taskings, each turned into one observation goal
+and checked against the catalog. One call on its own is three lines:
+
+```bash
 python3 -c "
 from tancho.tasking_to_goal import request, parse_goal, validate_goal
 r = request('Check whether the road under the slope is still passable.',
@@ -86,14 +93,24 @@ called. Results are in `docs/nemotron-tasking-comparison.md`.
 ## Run the frozen evaluation on Nebius AI Cloud
 
 `deploy/nebius_exhibition/prepare_evaluation_job.py` creates a Serverless Job that downloads
-the published revision, clones the pinned `cosmos-framework`, and evaluates the frozen
-104-case pack on one H100. It validates with `--dry-run` by default and only creates a job
-with `--execute`.
+the published revision, clones the pinned `cosmos-framework`, clones this repository at the
+commit it pins and checks the frozen pack's manifest hash, then evaluates all 104 cases on one
+H100. It validates with `--dry-run` by default and only creates a job with `--execute`.
+
+Three things come from your own Nebius account, so the script reads them from the environment
+rather than carrying ours:
 
 ```bash
+export NEBIUS_PROJECT_ID=project-...          # the project the job is created in
+export NEBIUS_FILESYSTEM_ID=computefilesystem-...  # holds the Cosmos 3 Edge parent weights
+export NEBIUS_IMAGE_REF=cr.<region>.nebius.cloud/<registry>/<image>@sha256:...
+
 python3 deploy/nebius_exhibition/prepare_evaluation_job.py            # dry run
 python3 deploy/nebius_exhibition/prepare_evaluation_job.py --execute  # creates the job
 ```
+
+The job prints one `TANCHO_EVAL` line with the score. Our run scored 104 of 104, with
+`exact_accuracy` 1.0 and `schema_valid_rate` 1.0, in 313 seconds.
 
 ## Before you publish anything from this tree
 

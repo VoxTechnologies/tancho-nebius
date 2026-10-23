@@ -16,14 +16,21 @@ import tarfile
 import time
 
 ROOT = Path(__file__).resolve().parents[2]
-NAME = 'exhibition-eval-v8'
+NAME = 'exhibition-eval-v8-pack8'
 RUN = ROOT / 'runs' / NAME
-PACK = ROOT / 'data/observation-program-r1-synthetic-final-v3'
-PROJECT = os.environ['NEBIUS_PROJECT_ID']  # e.g. project-xxxxxxxxxxxx
-FILESYSTEM = os.environ['NEBIUS_FILESYSTEM_ID']  # compute filesystem holding the parent weights
+PUBLIC_REPO = 'https://github.com/VoxTechnologies/tancho-nebius.git'
+PUBLIC_COMMIT = '8a40013af9c1fc7d5790c4718e8f80bb3b6283a5'
+PACK_MANIFEST_SHA = '27dbeac68d8c5df1127ea8d4d6bf5235d19843852ce2360922e70c18f5f6881f'
+PACK_DIR = 'data/observation-program-r1-synthetic-final-v8'
+THRESHOLDS = 'training/observation-program-r1-synthetic-final-v8-thresholds.json'
+# Your own Nebius resources. The parent weights live on the compute filesystem; the image is
+# image is one that carries torch, transformers and git, pushed to a registry the job can read.
+PROJECT = os.environ['NEBIUS_PROJECT_ID']
+FILESYSTEM = os.environ['NEBIUS_FILESYSTEM_ID']
+IMAGE_REF = os.environ['NEBIUS_IMAGE_REF']
 MODEL_REPO = 'v13s/tancho'
 MODEL_REVISION = '1d2b42a3e00542a63bbaf216295c7d119c706b2b'
-PARENT = os.environ.get('TANCHO_PARENT_DIR', '/artifacts/inputs/cosmos3-edge-344d602b')
+PARENT = '/artifacts/inputs/cosmos3-edge-344d602b'
 FRAMEWORK_REVISION = '96303bb0bdd14d9efa18f24d8ef98c7a0bfb8412'
 CODE = ('training/evaluate_observation_program_export.py',
         'training/observation_program_loader.py', 'training/score_observation_program.py',
@@ -40,18 +47,13 @@ remote=Path('/artifacts/exhibition-eval-v8-'+stamp);remote.mkdir(parents=True,ex
 scratch=Path('/tmp/tancho-exhibition');scratch.mkdir();code=1
 summary={'schema_version':'tancho-exhibition-eval-summary-1.0','stamp':stamp}
 try:
- work=remote/'work';work.mkdir()
- archive=Path('/opt/tancho/code.tar.gz')
- with archive.open('rb') as f:
-  assert hashlib.file_digest(f,'sha256').hexdigest()==__CODE_SHA__,'code archive changed'
- with tarfile.open(archive) as tf:tf.extractall(work,filter='data')
- pack=None
- for base,dirs,files in os.walk('/artifacts'):
-  if 'manifest.json' in files and base.endswith('data/observation-program-r1-synthetic-final-v3'):
-   with (Path(base)/'manifest.json').open('rb') as f:
-    if hashlib.file_digest(f,'sha256').hexdigest()==__PACK_SHA__:pack=Path(base);break
- if pack is None:raise FileNotFoundError('frozen pack not found on /artifacts')
- summary['pack']=str(pack)
+ work=scratch/'tancho-nebius'
+ subprocess.run(['git','clone','--quiet',__PUBLIC_REPO__,str(work)],check=True)
+ subprocess.run(['git','-C',str(work),'checkout','--quiet','--detach',__PUBLIC_COMMIT__],check=True)
+ pack=work/__PACK_DIR__
+ with (pack/'manifest.json').open('rb') as f:
+  assert hashlib.file_digest(f,'sha256').hexdigest()==__PACK_SHA__,'frozen pack changed'
+ summary['pack']=__PACK_DIR__;summary['public_commit']=__PUBLIC_COMMIT__
  parent=Path(__PARENT__)
  if not parent.is_dir():raise FileNotFoundError(parent)
  model=scratch/'published'
@@ -71,17 +73,18 @@ try:
  env['TRANSFORMERS_OFFLINE']='1';env['WANDB_MODE']='disabled'
  command=[str(python),str(work/'training/evaluate_observation_program_export.py'),
   '--pack',str(pack),'--base',str(model),'--export',str(model),
-  '--thresholds',str(work/'training/observation-program-r1-synthetic-final-v3-thresholds.json'),
+  '--thresholds',str(work/__THRESHOLDS__),
   '--output',str(remote/'results')]
  started=time.time()
  with (remote/'controller.log').open('w') as log:
   code=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=4200).returncode
  summary['seconds']=round(time.time()-started,1);summary['exit_code']=code
- for name in ('summary.json','scores.json','result.json'):
+ for name in ('report.json',):
   path=remote/'results'/name
   if path.is_file():
-   summary['results_'+name]=json.loads(path.read_text());break
- summary['results_files']=sorted(p.name for p in (remote/'results').glob('*')) if (remote/'results').is_dir() else []
+   r=json.loads(path.read_text());summary['passed']=r.get('passed')
+   summary['score']=r.get('score',{}).get('overall');break
+ summary['results_count']=len(list((remote/'results').glob('*.txt'))) if (remote/'results').is_dir() else 0
 except BaseException:
  with (remote/'bootstrap-error.log').open('w') as log:traceback.print_exc(file=log)
  summary['error']=traceback.format_exc()[-600:]
@@ -112,7 +115,11 @@ def main():
     bootstrap = (BOOTSTRAP
                  .replace('__STAMP__', repr(stamp))
                  .replace('__CODE_SHA__', repr(digest(code_archive)))
-                 .replace('__PACK_SHA__', repr(digest(PACK / 'manifest.json')))
+                 .replace('__PACK_SHA__', repr(PACK_MANIFEST_SHA))
+                 .replace('__PUBLIC_REPO__', repr(PUBLIC_REPO))
+                 .replace('__PUBLIC_COMMIT__', repr(PUBLIC_COMMIT))
+                 .replace('__PACK_DIR__', repr(PACK_DIR))
+                 .replace('__THRESHOLDS__', repr(THRESHOLDS))
                  .replace('__PARENT__', repr(PARENT))
                  .replace('__REPO__', repr(MODEL_REPO))
                  .replace('__REV__', repr(MODEL_REVISION))
@@ -128,16 +135,17 @@ def main():
     injected = sum((RUN / n).stat().st_size for n in ('launcher.py', 'bootstrap.py.gz', 'code.tar.gz'))
     if injected >= 48 * 1024:
         raise ValueError('Injected payload is %d bytes, over the 48 KiB limit' % injected)
-    image = json.loads((ROOT / 'runs/training-preparation/image-push/push-state.json').read_text())
+    # The stamp keeps a second run from colliding with the first one's job name.
+    job_name = 'tancho-%s-%s' % (NAME, stamp.lower())
     key = RUN / 'ssh_key'
     if not key.exists():
         subprocess.run(['ssh-keygen', '-q', '-t', 'ed25519', '-N', '', '-C', NAME,
                         '-f', str(key)], check=True)
     key.chmod(0o600)
     command = [str(Path.home() / '.local/bin/nebius'), 'ai', 'job', 'create',
-               '--parent-id', PROJECT, '--name', 'tancho-' + NAME,
+               '--parent-id', PROJECT, '--name', job_name,
                '--platform', 'gpu-h100-sxm', '--preset', '1gpu-16vcpu-200gb',
-               '--image', image['image_ref'],
+               '--image', IMAGE_REF,
                '--container-command', 'python', '--args', '/opt/tancho/launcher.py',
                '--volume', FILESYSTEM + ':/artifacts:rw',
                '--ssh-key', (RUN / 'ssh_key.pub').read_text().strip(), '--timeout', '90m',
@@ -158,8 +166,8 @@ def main():
     (RUN / 'receipt.json').write_text(json.dumps({
         'schema_version': 'tancho-exhibition-receipt-1.0', 'purpose': 'exhibition',
         'release_evidence': False, 'provider': 'nebius', 'compute': 'gpu-h100-sxm 1gpu-16vcpu-200gb',
-        'job_name': 'tancho-' + NAME, 'model_repo': MODEL_REPO, 'model_revision': MODEL_REVISION,
-        'framework_revision': FRAMEWORK_REVISION, 'image_ref': image['image_ref'],
+        'job_name': job_name, 'model_repo': MODEL_REPO, 'model_revision': MODEL_REVISION,
+        'framework_revision': FRAMEWORK_REVISION, 'image_ref': IMAGE_REF,
         'injected_bytes': injected, 'stamp': stamp, 'executed': args.execute}, indent=2) + '\n')
     print(completed.stdout.strip())
     print('injected bytes:', injected)
